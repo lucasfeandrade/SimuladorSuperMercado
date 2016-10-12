@@ -138,6 +138,14 @@ T& ArrayQueue<T>::back(){
 		return contents[size_];
 }
 
+template <class T>
+T& ArrayQueue<T>::front(){
+	if(empty())
+		throw std::out_of_range("A pilha está vazia, não tem size_o");
+	else
+		return contents[0];
+}
+
 //! size_o Atual
 /*!
     \return O valor do size_o atual da fila.
