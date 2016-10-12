@@ -25,5 +25,5 @@ public:
   unsigned int pagarEmDinheiro();
   bool tipoDeCliente();
 };
-
+ 
 #endif
