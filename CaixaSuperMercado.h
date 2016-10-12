@@ -4,6 +4,7 @@
 class CaixaSuperMercado {
 private:
     structures::ArrayQueue<Cliente> filaClientes_{10u};
+    Cliente primeiroDaFila;    //para informar para o supermercado o primeiro da fila
     unsigned int numClientesFila_;
     unsigned int numClientesAtendidos_;
     unsigned int tempoMedioDeEspera_;
@@ -18,6 +19,9 @@ private:
 public:
     unsigned int calculaSalario();
     unsigned int calculaTempoSaida();
+    Cliente removerPrimeiroCliente();
+    Cliente primeiraDaFila();
+
 }
 
 #endif

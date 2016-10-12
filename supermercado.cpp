@@ -4,8 +4,8 @@
 #include <time.h>     // time
 
 supermercado() {
-  //<ListaCircular>Caixa TodosCaixas
-  //string nomeSupermercado
+  structures::CircularList<Cliente> ListaCaixas;
+  string nomeSupermercado;
   numClientesDesistiram;
   faturamentoTotal;
   faturamentoPerdido;
@@ -16,7 +16,7 @@ supermercado() {
 
 void calculareEstatistica() {
 
-}  // QUE PORRA EH ESSA JESUS AMADO, FODEU ENFEAUNFEANfoearghrstubgosojhgvak;rflpaerncfo
+}
 
 void chamarCaixa() {
 
@@ -38,8 +38,14 @@ void percorrerCaixas () {
 
 }  // cada vez q o supermercado percorre a lista de caixas incrementa 1s no relogio
 
-cliente tirarCliente () {
-
+Cliente tirarCliente () {
+    for (auto i = 0; i < ListaCaixas.size() - 1 ; i++ )
+    {
+        CaixaSuperMercado Caixa =  ListaCaixas.at(i);
+        if ( Caixa.primeiroDaFila().horaSaidaFila() == relogioInterno )
+            Cliente clienteRemovido = Caixa.removerPrimeiroCliente();   //Retira Cliente 
+    }
+    return clienteRemovido;
 }  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
 
 void gerarCliente () {

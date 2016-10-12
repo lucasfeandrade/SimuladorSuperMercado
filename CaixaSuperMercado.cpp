@@ -3,8 +3,9 @@
 
 
 #include "CaixaSuperMercado.h"
+#include "cliente.h"
+#include <stdexcept>
 
-#include "std"
     CaixaSuperMercado(  unsigned int numClientesFila, unsigned int numClientesAtendidos,
                         unsigned int tempoMedioDeEspera, unsigned int faturamentoTotal,
                         unsigned int faturamentoMedio, unsigned int salario,
@@ -26,7 +27,13 @@
             salario_ = salario
     }
 
-
+    Cliente removerPrimeiroCliente() {
+        return filaClientes_.dequeue();
+    }
+    
+    Cliente primeiroDaFila() {
+        return filaClientes_.front();
+    }
 
     unsigned int calculaTempoSaida() {
         Cliente cliente;
