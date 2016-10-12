@@ -3,8 +3,8 @@
 
 
 #include "CaixaSuperMercado.h"
+#include <stdexcept>
 
-#include "std"
     CaixaSuperMercado(  unsigned int numClientesFila, unsigned int numClientesAtendidos,
                         unsigned int tempoMedioDeEspera, unsigned int faturamentoTotal,
                         unsigned int faturamentoMedio, unsigned int salario,

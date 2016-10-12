@@ -3,9 +3,9 @@
 #include <stdlib.h>   // srand, rand
 #include <time.h>     // time
 
-supermercaod() {
-  //<ListaCircular>Caixa TodosCaixas
-  //string nomeSupermercado
+supermercado() {
+  structures::CircularList<Cliente> TodosCaixas;
+  string nomeSupermercado;
   numClientesDesistiram;
   faturamentoTotal;
   faturamentoPerdido;
@@ -16,10 +16,10 @@ supermercaod() {
 
 void calculareEstatistica() {
 
-}  // QUE PORRA EH ESSA JESUS AMADO, FODEU ENFEAUNFEANfoearghrstubgosojhgvak;rflpaerncfo
+}
 
 void chamarCaixa() {
-  
+
 }
 
 void calcularFaturamento() {
