@@ -4,13 +4,18 @@
 #include <time.h>     // time
 
 supermercado() {
+<<<<<<< HEAD
   structures::CircularList<Cliente> TodosCaixas;
   string nomeSupermercado;
+=======
+  //<ListaCircular>Caixa TodosCaixas
+  //string nomeSupermercado
+>>>>>>> refs/remotes/origin/master
   numClientesDesistiram;
   faturamentoTotal;
   faturamentoPerdido;
   numCaixas;
-  relogioInterno;
+  relogioInterno = 0;
   numCaixasExtras;
 }
 

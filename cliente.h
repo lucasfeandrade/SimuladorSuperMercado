@@ -11,8 +11,6 @@ private:
   unsigned int gastosTotais;
   bool tipoDeCliente; //TRUE ESCOLHE A MENOR E FALSE ESCOLHE A COM MENOS QTD
   bool desistencia;
-protected:
-  //getters and setters if needed
 public:
   cliente();
   unsigned int gerarGastosTotais(int);
