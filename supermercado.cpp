@@ -42,6 +42,15 @@ cliente tirarCliente () {
 
 }  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
 
-cliente gerarCliente () {
+void gerarCliente () {
+  if (relogioInterno == cliente->horaChegadaFila()) {
+    cliente cliente = new cliente->cliente();
+    if (!full && cliente->escolherFila()) {
+      //procura caixa com menos gente
+    } else if (!full && !cliente->escolherFila()) {
+      //procura caixa com menos itens
+    } else {
 
-}  // se tAtual = tChegada, gera cliente com compras e lugar na fila. Calcula o proximo tempo de chegada ENQUEUE?
+    }
+  }
+}  // se tAtual = tChegada, gera cliente com compras e lugar na fila. Calcula o proximo tempo de chegada CHECAR CONDICAO DE FULL
