@@ -3,14 +3,14 @@
 #include <stdlib.h>   // srand, rand
 #include <time.h>     // time
 
-supermercaod() {
+supermercado() {
   //<ListaCircular>Caixa TodosCaixas
   //string nomeSupermercado
   numClientesDesistiram;
   faturamentoTotal;
   faturamentoPerdido;
   numCaixas;
-  relogioInterno;
+  relogioInterno = 0;
   numCaixasExtras;
 }
 
@@ -19,7 +19,7 @@ void calculareEstatistica() {
 }  // QUE PORRA EH ESSA JESUS AMADO, FODEU ENFEAUNFEANfoearghrstubgosojhgvak;rflpaerncfo
 
 void chamarCaixa() {
-  
+
 }
 
 void calcularFaturamento() {
