@@ -43,14 +43,14 @@ Cliente tirarCliente () {
     {
         CaixaSuperMercado Caixa =  ListaCaixas.at(i);
         if ( Caixa.primeiroDaFila().horaSaidaFila() == relogioInterno )
-            Cliente clienteRemovido = Caixa.removerPrimeiroCliente();   //Retira Cliente 
+            Cliente clienteRemovido = Caixa.removerPrimeiroCliente();   //Retira Cliente
     }
     return clienteRemovido;
 }  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
 
 void gerarCliente () {
+  cliente cliente = new cliente->cliente();
   if (relogioInterno == cliente->horaChegadaFila()) {
-    cliente cliente = new cliente->cliente();
     if (!full && cliente->escolherFila()) {
       //procura caixa com menos gente
     } else if (!full && !cliente->escolherFila()) {
