@@ -31,7 +31,7 @@ void calcularFaturamentoPerdido() {
 }
 
 bool filasLotadas () {
-
+    
 } // se passar de X ele retorna true
 
 //! Remove cliente de um caixa
@@ -46,7 +46,7 @@ void tirarCliente () {
     {
         CaixaSuperMercado Caixa =  ListaCaixas.at(i);
         if ( Caixa.primeiroDaFila().tSaidaFila() == relogioInterno )
-            Cliente clienteRemovido = Caixa.removerPrimeiroCliente();   //Retira Cliente
+            Cliente clienteRemovido = Caixa.removerPrimeiroCliente(); //Retira Cliente
     }
     relogioInterno++; //Toda vez que o método é executado o tempo aumenta em 1;
 }  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
