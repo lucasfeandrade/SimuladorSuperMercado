@@ -11,8 +11,9 @@ private:
   unsigned int numCaixas;
   unsigned int relogioInterno;
   unsigned int numCaixasExtras;
+  unsigned int clienteTempoChegadaFila;
 public:
-  supermercado();
+  supermercado(int);
   void calculareEstatistica();  // QUE PORRA EH ESSA JESUS AMADO, FODEU ENFEAUNFEANfoearghrstubgosojhgvak;rflpaerncfo
   void chamarCaixa();
   void calcularFaturamento();

@@ -69,10 +69,6 @@ unsigned int horaChegadaSuper() {
   return horaChegadaSuper;
 }
 
-unsigned int horaChegadaFila() {
-  return horaChegadaFila;
-}
-
 unsigned int horaSaidaFila() {
   return horaSaidaFila;
 }

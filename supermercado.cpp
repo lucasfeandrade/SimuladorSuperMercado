@@ -3,15 +3,11 @@
 #include <stdlib.h>   // srand, rand
 #include <time.h>     // time
 
-supermercado() {
-  structures::CircularList<Cliente> ListaCaixas;
-  string nomeSupermercado;
-  numClientesDesistiram;
-  faturamentoTotal;
-  faturamentoPerdido;
-  numCaixas;
+supermercado(int qtdCaixas, String nome) {
+  //structures::CircularList<Cliente> ListaCaixas;
+  String nomeSupermercado = nome;
+  numCaixas = qtdCaixas;
   relogioInterno = 0;
-  numCaixasExtras;
 }
 
 void calculareEstatistica() {
@@ -49,8 +45,8 @@ Cliente tirarCliente () {
 }  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
 
 void gerarCliente () {
-  cliente cliente = new cliente->cliente();
-  if (relogioInterno == cliente->horaChegadaFila()) {
+  if (relogioInterno == horaChegadaFila) {
+    cliente cliente = new cliente->cliente();
     if (!full && cliente->escolherFila()) {
       //procura caixa com menos gente
     } else if (!full && !cliente->escolherFila()) {

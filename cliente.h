@@ -5,7 +5,6 @@ using namespace std;
 class cliente {
 private:
   unsigned int horaChegadaSuper;
-  unsigned int horaChegadaFila;
   unsigned int horaSaidaFila;
   unsigned int qtdItens;
   bool pagamentoDinheiro;
@@ -24,7 +23,6 @@ public:
   unsigned int pagarEmDinheiro();
   bool tipoDeCliente();
   unsigned int horaChegadaSuper();
-  unsigned int horaChegadaFila();
   unsigned int horaSaidaFila();
 };
 
