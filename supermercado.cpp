@@ -34,18 +34,21 @@ bool filasLotadas () {
 
 } // se passar de X ele retorna true
 
-void percorrerCaixas () {
-
-}  // cada vez q o supermercado percorre a lista de caixas incrementa 1s no relogio
-
-Cliente tirarCliente () {
+//! Remove cliente de um caixa
+/*!
+    Percorre todos os caixas e remove aqueles clientes cujo tempo seja igual ao
+    tempo do relógio interno. De qualquer forma o relógio interno do supermercado
+    é somado em 1.
+    \return void
+*/
+void tirarCliente () {
     for (auto i = 0; i < ListaCaixas.size() - 1 ; i++ )
     {
         CaixaSuperMercado Caixa =  ListaCaixas.at(i);
-        if ( Caixa.primeiroDaFila().horaSaidaFila() == relogioInterno )
+        if ( Caixa.primeiroDaFila().tSaidaFila() == relogioInterno )
             Cliente clienteRemovido = Caixa.removerPrimeiroCliente();   //Retira Cliente
     }
-    return clienteRemovido;
+    relogioInterno++; //Toda vez que o método é executado o tempo aumenta em 1;
 }  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
 
 void gerarCliente () {

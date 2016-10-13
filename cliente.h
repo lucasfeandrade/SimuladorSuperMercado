@@ -6,7 +6,7 @@ class cliente {
 private:
   unsigned int horaChegadaSuper;
   unsigned int horaChegadaFila;
-  unsigned int horaSaidaFila;
+  unsigned int tSaidaFila;
   unsigned int qtdItens;
   bool pagamentoDinheiro;
   unsigned int gastosTotais;
@@ -25,7 +25,7 @@ public:
   bool tipoDeCliente();
   unsigned int horaChegadaSuper();
   unsigned int horaChegadaFila();
-  unsigned int horaSaidaFila();
+  unsigned int tSaidaFila();
 };
 
 #endif

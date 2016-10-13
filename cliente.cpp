@@ -4,8 +4,8 @@
 #include <time.h>     // time
 
 cliente() {
-  horaChegadaSuper  // No construtor inicializa (?) Deve pegar horario do super mercado, relogio interno OLHAR ESSE
-  horaSaidaFila  // Acho que nao inicializa no construtor, e deve pegar horario do relogio interno do super OLHAR ESSE
+  horaChegadaSuper;  // No construtor inicializa (?) Deve pegar horario do super mercado, relogio interno OLHAR ESSE
+  tSaidaFila;  // Acho que nao inicializa no construtor, e deve pegar horario do relogio interno do super OLHAR ESSE
   qtdItens = gerarQtdItens();
   pagamentoDinheiro = pagarEmDinheiro();  // Metodo com 20% de chance dinheiro e 80% cartao
   gastosTotais = gerarGastosTotais();
@@ -73,6 +73,6 @@ unsigned int horaChegadaFila() {
   return horaChegadaFila;
 }
 
-unsigned int horaSaidaFila() {
-  return horaSaidaFila;
+unsigned int tSaidaFila() {
+  return tSaidaFila;
 }
