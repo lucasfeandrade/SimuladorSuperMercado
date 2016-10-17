@@ -7,7 +7,7 @@
 #include <string>
 #include <stdlib.h>
 
-#include "./supermercado.h"
+#include "supermercado.h"
 
 
 int main(int argc, const char * argv[]) {

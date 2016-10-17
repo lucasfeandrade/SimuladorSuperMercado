@@ -115,14 +115,14 @@ void tirarCliente()
       CaixaSuperMercado* Caixa =  &ListaCaixas.at(i);
       if (Caixa->primeiroDaFila()->tSaidaFila() == relogioInterno_)
       {
-          cliente* clienteRemovido = &Caixa.removerPrimeiroCliente(); //Retira Cliente
-          Caixa->adicionarFaturamento(cliente->gastosTotais());
+          cliente* clienteRemovido = &Caixa->removerPrimeiroCliente(); //Retira Cliente
+          Caixa->adicionarFaturamento(clienteRemovido->gastosTotais());
       }
   }
   relogioInterno_++; //Toda vez que o método é executado o tempo aumenta em 1;
 }
 
-void gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)         //MUDADO
+void gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
 {
     CaixaSuperMercado* NovoCaixa = new CaixaSuperMercado(salario, eficiencia, id, caixaExtra );
     NovoCaixa.push_back();

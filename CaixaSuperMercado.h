@@ -6,7 +6,6 @@
 
 #include <string.h>
 #include "array_queue.h"
-
 #include "cliente.h"
 //! Classe CaixaSuperMercado
 /*!
@@ -82,9 +81,7 @@ public:
       Enfileira cliente.
   */
   CaixaSuperMercado(unsigned int, unsigned int,
-                unsigned int, unsigned int,
-                unsigned int, unsigned int,
-                unsigned int, String, bool);
+                    std::string, bool);
     //! adicionarFaturamento(unsigned int)
     /*!
         Adiciona faturamento ao caixa (entrada do metodo).
