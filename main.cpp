@@ -15,15 +15,15 @@ int main(int argc, const char * argv[]) {
     supermercado* Super = new supermercado("Super da Hora", 15,28800);   //simulando por 8 horas
 
     //Gerando todos os caixas: (Mudar os 5 primeiros para 0 default)
-    Super->GerarCaixa( salario, 1, "Roberto Justus", false);
-    Super->GerarCaixa( salario, 2, "Claudia Raia ", false);
-    Super->GerarCaixa( salario, 1, "Roberta Miranda", false);
-    Super->GerarCaixa( salario, 2, "Paula Fernandes", false);
-    Super->GerarCaixa( salario, 1, "Bob Esponja", false);
-    Super->GerarCaixa( salario, 2, "Faustão", false);
-    Super->GerarCaixa( salario, 2, "Péricles", false);
-    Super->GerarCaixa( salario, 3, "Pelé", false);
-    Super->GerarCaixa( salario, 3, "Edson Arantes do Nascimento", false);
+    Super->gerarCaixa( salario, 1, "Roberto Justus", false);
+    Super->gerarCaixa( salario, 2, "Claudia Raia ", false);
+    Super->gerarCaixa( salario, 1, "Roberta Miranda", false);
+    Super->gerarCaixa( salario, 2, "Paula Fernandes", false);
+    Super->gerarCaixa( salario, 1, "Bob Esponja", false);
+    Super->gerarCaixa( salario, 2, "Faustão", false);
+    Super->gerarCaixa( salario, 2, "Péricles", false);
+    Super->gerarCaixa( salario, 3, "Pelé", false);
+    Super->gerarCaixa( salario, 3, "Edson Arantes do Nascimento", false);
 
     while (Super->relogioInterno() < Super->tempoDeSimulacao())
     {

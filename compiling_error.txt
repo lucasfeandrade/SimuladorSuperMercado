@@ -17,33 +17,6 @@ In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/Simul
      cliente primeiroDaFila;
              ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp: In function ‘int main(int, const char**)’:
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:18:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 1, "Roberto Justus", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:19:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 2, "Claudia Raia ", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:20:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 1, "Roberta Miranda", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:21:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 2, "Paula Fernandes", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:22:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 1, "Bob Esponja", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:23:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 2, "Faustão", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:24:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 2, "Péricles", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:25:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 3, "Pelé", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:26:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa( salario, 3, "Edson Arantes do Nascimento", false);
-            ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:28:45: error: ‘class supermercado’ has no member named ‘tempoDeSimulacao’
      while (Super->relogioInterno() < Super->tempoDeSimulacao())
                                              ^
