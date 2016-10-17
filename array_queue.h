@@ -1,3 +1,6 @@
+// <Copyright Owner> Lucas Fernandes Andade
+// <Copyright Owner> Lucas Castelan Prado
+
 #ifndef STRUCTURES_ARRAY_QUEUE_H
 #define STRUCTURES_ARRAY_QUEUE_H
 
@@ -8,6 +11,10 @@ namespace structures {
 
 template<typename T>
 class ArrayQueue {
+  //! Classe ArrayQueue
+  /*!
+      Classe lista de vetor
+  */
 public:
     ArrayQueue();
 

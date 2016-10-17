@@ -1,4 +1,6 @@
-  // <Copyright Owner> Lucas Fernandes Andade
+// <Copyright Owner> Lucas Fernandes Andade
+// <Copyright Owner> Lucas Castelan Prado
+
 #ifndef STRUCTURES_CIRCULAR_LIST_H
 #define STRUCTURES_CIRCULAR_LIST_H
 
@@ -7,23 +9,25 @@
 
 namespace structures {
 
-//! Classe Lista Circular
-/*!
-*/
+  //! Classe CircularList
+  /*!
+      Classe lista circular
+  */
 template<typename T>
 class CircularList {
  public:
-     //! Construtor padrao
-    /*!
-        
-    */
+   //! CircularList()
+  /*!
+    Construtor default
+  */
     CircularList() {
         size_ = 0;
         head = nullptr;
     }
 
-    //! Destrutor padrao
+    //! ~CircularList()
     /*!
+      Destrutor da lista circular
     */
     ~CircularList() {
         clear();
@@ -51,7 +55,7 @@ class CircularList {
     //! Insere no fim da lista
     /*!
         Insere no indice do tamanho da lista
-        
+
         \param T& data: dado a ser inserido
     */
     void push_back(const T& data) {
@@ -61,7 +65,7 @@ class CircularList {
     //! Insere no inicio da lista
     /*!
         Insere no inicio da lista caso ela não esteja cheia
-        
+
         \param T& data: dado a ser inserido
     */
     void push_front(const T& data) {
@@ -83,7 +87,7 @@ class CircularList {
     //! Insere na posição
     /*!
         Insere o dado na posição endicada no parametro
-        
+
         \param T& data: dado a ser inserido
         \param size_t: indice onde o dado será inserido
     */
@@ -113,7 +117,7 @@ class CircularList {
     //! Insere em ordem
     /*!
         Insere o dado em ordem na lista
-        
+
         \param T& data: dado a ser inserido
     */
     void insert_sorted(const T& data) {
@@ -136,7 +140,7 @@ class CircularList {
 
     //! Retorna dado no indice indicado
     /*!
-        
+
         \param size_t: Indice do dado a ser encontrado
         \return T&: dado no indice indicado
     */
@@ -151,7 +155,7 @@ class CircularList {
 
     //! Retorna dado no indice indicado
     /*!
-        
+
         \param size_t: Indice do dado a ser encontrado
         \return T&: dado no indice indicado
     */
@@ -167,7 +171,7 @@ class CircularList {
     //! Retira da posicao
     /*!
         Retira o dado da posicao indicada pelo parametro
-        
+
         \param size_t: Indice do elemento a ser retirado
         \return T: dado retirado
     */
@@ -218,7 +222,7 @@ class CircularList {
 
     //! Remove dado
     /*!
-        Remove o dado caso ele existe 
+        Remove o dado caso ele existe
         \parm T&: dado a ser removido da lista
     */
     void remove(const T& data) {

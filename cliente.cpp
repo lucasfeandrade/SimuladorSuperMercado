@@ -1,3 +1,5 @@
+// <Copyright Owner> Lucas Fernandes Andade
+// <Copyright Owner> Lucas Castelan Prado
 
 #include <stdio.h>    // printf, NULL
 #include <stdlib.h>   // srand, rand

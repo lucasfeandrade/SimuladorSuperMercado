@@ -1,3 +1,5 @@
+// <Copyright Owner> Lucas Fernandes Andade
+// <Copyright Owner> Lucas Castelan Prado
 
 #include <stdio.h>    // printf, NULL
 #include <iostream>
@@ -66,13 +68,6 @@ void calcularEstatistica()          //MUDADO MUITA COISA
   faturamentoPerdido_ << " reais." << std::endl;
 }
 
-//! Checar se precisa chamar novo caixa
-/*!
-    Se o tamanho de todas as filas ultrapassar um valor llimite
-    (definido pelo usuário como parâmetro de simulação), o
-    supermercado chamará mais um caixa para trabalhar.
-    \return void
-*/
 void chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
                 unsigned int eficiencia, unsigned int id)
 {
@@ -90,13 +85,6 @@ void chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
     }
 }
 
-//! Calcula faturamento total
-/*!
-    Percorre toda a lista de caixas e soma o faturamento de cada caixa no
-    atributo faturamentoTotal_. Cada vez que o metodo for executado ele
-    zera o valor do faturamentoTotal_ antes de somar todos os valores.
-    \return void
-*/
 unsigned int calcularFaturamento()
 {
     faturamentoTotal_ = 0u;
@@ -104,7 +92,6 @@ unsigned int calcularFaturamento()
         faturamentoTotal_ += ListaCaixas.at(i).faturamentoTotalCaixa();
     return faturamentoTotal_;
 }
-
 
 unsigned int calcularFaturamentoPerdido()
 {
@@ -121,13 +108,6 @@ bool filasLotadas()
     return true;
 } // se passar de X ele retorna true
 
-//! Remove cliente de um caixa
-/*!
-    Percorre todos os caixas e remove aqueles clientes cujo tempo seja igual ao
-    tempo do relógio interno. De qualquer forma o relógio interno do supermercado
-    é somado em 1.
-    \return void
-*/
 void tirarCliente()
 {
   for (auto i = 0; i < ListaCaixas.size() - 1 ; i++)
@@ -140,7 +120,7 @@ void tirarCliente()
       }
   }
   relogioInterno_++; //Toda vez que o método é executado o tempo aumenta em 1;
-}  // se tSaida == tAtual, atende cliente e tira da fila
+}
 
 void gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)         //MUDADO
 {
@@ -148,16 +128,6 @@ void gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, 
     NovoCaixa.push_back();
 }
 
-//! Gerar cliente
-/*!
-    Verifica se ja eh hora do proximo cliente entrar na fila. Caso nao seja, o
-    metodo nao faz nada. Caso seja, ele gera o cliente, o enfileira de acordo
-    com o tipo de cliente e calcula o tempo de saida do cliente. Se nao houver
-    espaco na fila, o cliente vai embora e eh calculado o prejuizo.
-    Por fim, em ambos os casos, eh calculado o tempo de chegada do proximo
-    cliente.
-    \return void
-*/
 void gerarCliente()
 {
   if (relogioInterno_ == clienteTempoChegadaProximoFila_)
@@ -207,7 +177,7 @@ void gerarCliente()
     }
     clienteTempoChegadaProximoFila();
   }
-}  // se tAtual = tChegada, gera cliente com compras e lugar na fila. Calcula o proximo tempo de chegada CHECAR CONDICAO DE FULL
+} //checar condicao full
 
 void clienteTempoChegadaProximoFila()
 {

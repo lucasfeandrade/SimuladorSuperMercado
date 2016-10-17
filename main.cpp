@@ -1,3 +1,6 @@
+// <Copyright Owner> Lucas Fernandes Andade
+// <Copyright Owner> Lucas Castelan Prado
+
 #include <iostream>
 #include <cstdint>
 #include <stdexcept>
