@@ -2,8 +2,7 @@
 // <Copyright Owner>
 
 
-#include "CaixaSuperMercado.h"
-#include "cliente.h"
+#include "./CaixaSuperMercado.h"
 #include <stdexcept>
 
 CaixaSuperMercado( unsigned int salario, unsigned int eficiencia, String id, bool caixaExtra)

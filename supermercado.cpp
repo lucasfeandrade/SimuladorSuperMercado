@@ -6,11 +6,11 @@
 
 #include "supermercado.h"
 
-supermercado(unsigned int numCaixas, std::string nomeSupermercado, unsigned int tempoMedioProximoCliente,
+supermercado(std::string nomeSupermercado, unsigned int tempoMedioProximoCliente,
              unsigned int tempoDeSimulacao)
 {
   nomeSupermercado_ = nomeSupermercado;
-  numCaixas_ = numCaixas;
+  numCaixas_ = 0;
   relogioInterno_ = 0;
   faturamentoPerdido_ = 0;
   faturamentoTotal_ = 0;
@@ -146,6 +146,7 @@ void gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, 
 {
     CaixaSuperMercado* NovoCaixa = new CaixaSuperMercado(salario, eficiencia, id, caixaExtra );
     NovoCaixa.push_back();
+    numCaixas_++;
 }
 
 //! Gerar cliente

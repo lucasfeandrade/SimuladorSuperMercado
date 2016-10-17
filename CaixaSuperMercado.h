@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include "array_queue.h"
-#include "cliente.h"
+#include "./cliente.h"
 
 class CaixaSuperMercado {
 private:

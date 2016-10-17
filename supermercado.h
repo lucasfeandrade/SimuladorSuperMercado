@@ -25,22 +25,18 @@ private:
 
 
 public:
-  supermercado(int, std::string, int);
+  supermercado(std::string, unsigned int, unsigned int);
   unsigned int relogioInterno();
   void calcularEstatistica();
   void chamarCaixaExtra();
   unsigned int calcularFaturamento();
-  void calcularFaturamento();
   void calcularFaturamentoPerdido();
   bool filasLotadas();  // se passar de X ele retorna true
   void percorrerCaixas();  // cada vez q o supermercado percorre a lista de caixas incrementa 1s no relogio
   void tirarCliente();  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
   void gerarCliente();  // se tAtual = tChegada, gera cliente com compras e lugar na fila. Calcula o proximo tempo de chegada ENQUEUE?
   void clientesAtendidos();
-  void gerarCaixa(unsigned int, unsigned int,
-                unsigned int, unsigned int,
-                unsigned int, unsigned int,
-                unsigned int, std::string, bool);
+  void gerarCaixa(unsigned int, unsigned int, std::string, bool);
 };
 
 
