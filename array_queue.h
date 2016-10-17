@@ -16,6 +16,7 @@ public:
     ~ArrayQueue();
 
     void enqueue(const T& data);
+    T& front();
 
     T dequeue();
 
@@ -164,10 +165,6 @@ std::size_t ArrayQueue<T>::max_size(){
     return max_size_;
 }
 
-template <class T>
-std::size_t ArrayQueue<T>::max_size(){
-    return max_size_;
-}
 
 //! size_o maximo
 /*!
