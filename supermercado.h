@@ -28,13 +28,44 @@ public:
   supermercado(std::string, unsigned int, unsigned int);
   unsigned int relogioInterno();
   void calcularEstatistica();
+  //! Checar se precisa chamar novo caixa
+  /*!
+      Se o tamanho de todas as filas ultrapassar um valor llimite
+      (definido pelo usuário como parâmetro de simulação), o
+      supermercado chamará mais um caixa para trabalhar.
+      \return void
+  */
   void chamarCaixaExtra();
+  //! Calcula faturamento total
+  /*!
+      Percorre toda a lista de caixas e soma o faturamento de cada caixa no
+      atributo faturamentoTotal_. Cada vez que o metodo for executado ele
+      zera o valor do faturamentoTotal_ antes de somar todos os valores.
+      \return void
+  */
   unsigned int calcularFaturamento();
   void calcularFaturamentoPerdido();
   bool filasLotadas();  // se passar de X ele retorna true
   void percorrerCaixas();  // cada vez q o supermercado percorre a lista de caixas incrementa 1s no relogio
-  void tirarCliente();  // se tSaida == tAtual, atende cliente e tira da fila DEQUEUE?
-  void gerarCliente();  // se tAtual = tChegada, gera cliente com compras e lugar na fila. Calcula o proximo tempo de chegada ENQUEUE?
+  //! Remove cliente de um caixa
+  /*!
+      Percorre todos os caixas e remove aqueles clientes cujo tempo seja igual ao
+      tempo do relógio interno. De qualquer forma o relógio interno do supermercado
+      é somado em 1.
+      \return void
+  */
+  void tirarCliente();
+  //! Gerar cliente
+  /*!
+      Verifica se ja eh hora do proximo cliente entrar na fila. Caso nao seja, o
+      metodo nao faz nada. Caso seja, ele gera o cliente, o enfileira de acordo
+      com o tipo de cliente e calcula o tempo de saida do cliente. Se nao houver
+      espaco na fila, o cliente vai embora e eh calculado o prejuizo.
+      Por fim, em ambos os casos, eh calculado o tempo de chegada do proximo
+      cliente.
+      \return void
+  */
+  void gerarCliente();
   void clientesAtendidos();
   void gerarCaixa(unsigned int, unsigned int, std::string, bool);
 };

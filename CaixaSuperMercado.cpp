@@ -1,6 +1,5 @@
 // <Copyright Owner> Lucas Fernandes Andade
-// <Copyright Owner>
-
+// <Copyright Owner> Lucas Castelan Prado
 
 #include "./CaixaSuperMercado.h"
 #include <stdexcept>
@@ -29,7 +28,7 @@ bool caixaLotado()
     return filaClientes_.full();
 }
 
-void adicionarFaturamento(unsigned int faturamento)     //Mudado
+void adicionarFaturamento(unsigned int faturamento)
 {
     faturamentoTotal_ +=faturamento;
 }
