@@ -1,10 +1,8 @@
 #ifndef SUPERMERCADO_H
 #define SUPERMERCADO_H
 
-#include <string>
-#include "circular_list.h"
-#include "cliente.h"
 #include "CaixaSuperMercado.h"
+#include "circular_list.h"
 
 class supermercado {
 private:

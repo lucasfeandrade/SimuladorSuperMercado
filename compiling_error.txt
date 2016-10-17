@@ -1,12 +1,15 @@
 In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.h:8:0,
-                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:7,
-                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:10:
+                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:4,
+                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:9:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/array_queue.h:47:26: error: non-static data member declared ‘auto’
+      auto DEFAULT_SIZE = 10u;
+                          ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/array_queue.h:182:33: error: ‘T& structures::ArrayQueue<T>::contents’ is not a static data member of ‘class structures::ArrayQueue<T>’
  T& ArrayQueue<T>::contents(index){
                                  ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/array_queue.h:182:33: error: template definition of non-template ‘T& structures::ArrayQueue<T>::contents’
-In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:7:0,
-                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:10:
+In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:4:0,
+                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:9:
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.h:118:28: error: ‘cliente CaixaSuperMercado::primeiroDaFila()’ conflicts with a previous declaration
      cliente primeiroDaFila();
                             ^
@@ -14,44 +17,44 @@ In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/Simul
      cliente primeiroDaFila;
              ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp: In function ‘int main(int, const char**)’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:18:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
+     Super->GerarCaixa( salario, 1, "Roberto Justus", false);
+            ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:19:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 1, "Roberto Justus", false);
+     Super->GerarCaixa( salario, 2, "Claudia Raia ", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:20:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 2, "Claudia Raia ", false);
+     Super->GerarCaixa( salario, 1, "Roberta Miranda", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:21:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 1, "Roberta Miranda", false);
+     Super->GerarCaixa( salario, 2, "Paula Fernandes", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:22:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 2, "Paula Fernandes", false);
+     Super->GerarCaixa( salario, 1, "Bob Esponja", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:23:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 1, "Bob Esponja", false);
+     Super->GerarCaixa( salario, 2, "Faustão", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:24:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 2, "Faustão", false);
+     Super->GerarCaixa( salario, 2, "Péricles", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:25:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 2, "Péricles", false);
+     Super->GerarCaixa( salario, 3, "Pelé", false);
             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:26:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 3, "Pelé", false);
+     Super->GerarCaixa( salario, 3, "Edson Arantes do Nascimento", false);
             ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:27:12: error: ‘class supermercado’ has no member named ‘GerarCaixa’
-     Super->GerarCaixa(0, 0, 0, 0, 0, salario, 3, "Edson Arantes do Nascimento", false);
-            ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:29:45: error: ‘class supermercado’ has no member named ‘tempoDeSimulacao’
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:28:45: error: ‘class supermercado’ has no member named ‘tempoDeSimulacao’
      while (Super->relogioInterno() < Super->tempoDeSimulacao())
                                              ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:32:16: error: ‘class supermercado’ has no member named ‘TirarCliente’
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:31:16: error: ‘class supermercado’ has no member named ‘TirarCliente’
          Super->TirarCliente();
                 ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:33:57: error: no matching function for call to ‘supermercado::chamarCaixaExtra(int, unsigned int&, int, const char [11])’
-         Super->chamarCaixaExtra(9,salario,2,"CaixaExtra");
-                                                         ^
-In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:10:0:
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:38:8: note: candidate: void supermercado::chamarCaixaExtra()
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:32:60: error: no matching function for call to ‘supermercado::chamarCaixaExtra(unsigned int, unsigned int&, unsigned int, const char [11])’
+         Super->chamarCaixaExtra(10u,salario,2u,"CaixaExtra");
+                                                            ^
+In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:9:0:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:36:8: note: candidate: void supermercado::chamarCaixaExtra()
    void chamarCaixaExtra();
         ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:38:8: note:   candidate expects 0 arguments, 4 provided
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:36:8: note:   candidate expects 0 arguments, 4 provided

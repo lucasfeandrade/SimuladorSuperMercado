@@ -53,7 +53,7 @@ void calcularEstatistica()          //MUDADO MUITA COISA
   for (auto i = 0; i < numCaixas_; i++)
   {
     std::cout << "  Caixa " << ListaCaixas.at(i).id() << " faturou " <<
-    ListaCaixas.at(i).faturamentoTotalCaixa() << " reais." << endl;
+    ListaCaixas.at(i).faturamentoTotalCaixa() << " reais." << std::endl;
   }
   std::cout << "O lucro de cada caixa foi: " << std::endl;
   for (auto i = 0; i < numCaixas_; i++)
@@ -69,7 +69,7 @@ void calcularEstatistica()          //MUDADO MUITA COISA
 }
 
 void chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
-                unsigned int eficiencia, unsigned int id)
+                      unsigned int eficiencia, std::string id)
 {
     auto counter = 0;
     for (auto i = 0; i < ListaCaixas.size() - 1; i++)
@@ -79,7 +79,7 @@ void chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
     }
     if (counter == ListaCaixas.size())
     {
-        CaixaSuperMercado* CaixaExtra = new CaixaSuperMercado(  0, 0, 0, 0, 0, salarioCaixa, eficiencia, id, true);
+        CaixaSuperMercado* CaixaExtra = new CaixaSuperMercado(salarioCaixa, eficiencia, id, true);
         ListaCaixas.push_back(CaixaExtra);  //adiciona caixa extra nalista
         numCaixas_++;
     }

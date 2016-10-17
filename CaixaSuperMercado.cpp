@@ -1,8 +1,7 @@
 // <Copyright Owner> Lucas Fernandes Andade
 // <Copyright Owner> Lucas Castelan Prado
 
-#include "./CaixaSuperMercado.h"
-#include <stdexcept>
+#include "CaixaSuperMercado.h"
 
 CaixaSuperMercado( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
 {               //MUDADO
