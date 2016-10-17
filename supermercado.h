@@ -5,6 +5,7 @@
 #include "circular_list.h"
 
 class supermercado {
+
 private:
   structures::CircularList<cliente> TodosCaixas_;
   std::string nomeSupermercado_;
@@ -33,7 +34,8 @@ public:
       supermercado chamará mais um caixa para trabalhar.
       \return void
   */
-  void chamarCaixaExtra();
+  void chamarCaixaExtra(unsigned int , unsigned int ,
+                        unsigned int , std::string );
   //! Calcula faturamento total
   /*!
       Percorre toda a lista de caixas e soma o faturamento de cada caixa no
