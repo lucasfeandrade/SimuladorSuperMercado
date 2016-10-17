@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     while (Super->relogioInterno() < Super->tempoDeSimulacao())
     {
         Super->gerarCliente();
-        Super->TirarCliente();
+        Super->tirarCliente();
         Super->chamarCaixaExtra(10u,salario,2u,"CaixaExtra");
 
     }

@@ -1,6 +1,5 @@
 In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.h:8:0,
-                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:4,
-                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:9:
+                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:4:
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/array_queue.h:47:26: error: non-static data member declared ‘auto’
       auto DEFAULT_SIZE = 10u;
                           ^
@@ -8,26 +7,101 @@ In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/Simul
  T& ArrayQueue<T>::contents(index){
                                  ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/array_queue.h:182:33: error: template definition of non-template ‘T& structures::ArrayQueue<T>::contents’
-In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:4:0,
-                 from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:9:
+In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:4:0:
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.h:118:28: error: ‘cliente CaixaSuperMercado::primeiroDaFila()’ conflicts with a previous declaration
      cliente primeiroDaFila();
                             ^
 /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.h:25:13: note: previous declaration ‘cliente CaixaSuperMercado::primeiroDaFila’
      cliente primeiroDaFila;
              ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp: In function ‘int main(int, const char**)’:
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:28:45: error: ‘class supermercado’ has no member named ‘tempoDeSimulacao’
-     while (Super->relogioInterno() < Super->tempoDeSimulacao())
-                                             ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:31:16: error: ‘class supermercado’ has no member named ‘TirarCliente’
-         Super->TirarCliente();
-                ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:32:60: error: no matching function for call to ‘supermercado::chamarCaixaExtra(unsigned int, unsigned int&, unsigned int, const char [11])’
-         Super->chamarCaixaExtra(10u,salario,2u,"CaixaExtra");
-                                                            ^
-In file included from /home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:9:0:
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:36:8: note: candidate: void supermercado::chamarCaixaExtra()
-   void chamarCaixaExtra();
-        ^
-/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/supermercado.h:36:8: note:   candidate expects 0 arguments, 4 provided
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:6:19: error: expected unqualified-id before ‘unsigned’
+ CaixaSuperMercado(unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
+                   ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:6:19: error: expected ‘)’ before ‘unsigned’
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘bool caixaLotado()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:27:12: error: ‘filaClientes_’ was not declared in this scope
+     return filaClientes_.full();
+            ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘void adicionarFaturamento(unsigned int)’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:32:5: error: ‘faturamentoTotal_’ was not declared in this scope
+     faturamentoTotal_ +=faturamento;
+     ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘cliente removerPrimeiroCliente()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:36:12: error: ‘filaClientes_’ was not declared in this scope
+     return filaClientes_.dequeue();
+            ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘void adicionarClienteFila()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:41:5: error: ‘filaClientes_’ was not declared in this scope
+     filaClientes_.enqueue();
+     ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘cliente primeiroDaFila()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:46:12: error: ‘filaClientes_’ was not declared in this scope
+     return filaClientes_.front();
+            ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘unsigned int faturamentoTotalCaixa()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:51:12: error: ‘faturamentoTotalCaixa_’ was not declared in this scope
+     return faturamentoTotalCaixa_;
+            ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘unsigned int calculaTempoSaida()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:58:9: error: ‘eficiencia_’ was not declared in this scope
+     if (eficiencia_ == 1)
+         ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:60:30: error: ‘filaClientes_’ was not declared in this scope
+         for (auto i = 0; i < filaClientes_->size(); i++)
+                              ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:63:24: error: base operand of ‘->’ has non-pointer type ‘cliente’
+             if (cliente->pagamentoDinheiro())
+                        ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:64:31: error: ‘eficiencia’ was not declared in this scope
+                 tempoSaida += eficiencia*cliente->qtdItens();
+                               ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:64:49: error: base operand of ‘->’ has non-pointer type ‘cliente’
+                 tempoSaida += eficiencia*cliente->qtdItens();
+                                                 ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:66:31: error: ‘eficiencia’ was not declared in this scope
+                 tempoSaida += eficiencia*cliente->qtdItens() + 10;
+                               ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:66:49: error: base operand of ‘->’ has non-pointer type ‘cliente’
+                 tempoSaida += eficiencia*cliente->qtdItens() + 10;
+                                                 ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:69:9: error: ‘eficiencia_’ was not declared in this scope
+     if (eficiencia_ == 2)
+         ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:71:30: error: ‘filaClientes_’ was not declared in this scope
+         for (auto i = 0; i < filaClientes_->size(); i++)
+                              ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:74:24: error: base operand of ‘->’ has non-pointer type ‘cliente’
+             if (cliente->pagamentoDinheiro())
+                        ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:75:31: error: ‘eficiencia’ was not declared in this scope
+                 tempoSaida += eficiencia*cliente->qtdItens();
+                               ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:75:49: error: base operand of ‘->’ has non-pointer type ‘cliente’
+                 tempoSaida += eficiencia*cliente->qtdItens();
+                                                 ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:77:31: error: ‘eficiencia’ was not declared in this scope
+                 tempoSaida += eficiencia*cliente->qtdItens() + 25;
+                               ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:77:49: error: base operand of ‘->’ has non-pointer type ‘cliente’
+                 tempoSaida += eficiencia*cliente->qtdItens() + 25;
+                                                 ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:82:30: error: ‘filaClientes_’ was not declared in this scope
+         for (auto i = 0; i < filaClientes_->size(); i++)
+                              ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:85:24: error: base operand of ‘->’ has non-pointer type ‘cliente’
+             if (cliente->pagamentoDinheiro())
+                        ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:86:40: error: base operand of ‘->’ has non-pointer type ‘cliente’
+                 tempoSaida += 4*cliente->qtdItens();
+                                        ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:88:40: error: base operand of ‘->’ has non-pointer type ‘cliente’
+                 tempoSaida += 4*cliente->qtdItens() + 60;
+                                        ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: In function ‘structures::ArrayQueue<cliente> filaClientes()’:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:96:10: error: ‘filaClientes_’ was not declared in this scope
+   return filaClientes_;
+          ^
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp: At global scope:
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/CaixaSuperMercado.cpp:99:1: error: ‘String’ does not name a type
+ String id_()
+ ^

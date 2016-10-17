@@ -66,6 +66,7 @@ public:
   void gerarCliente();
   void clientesAtendidos();
   void gerarCaixa(unsigned int, unsigned int, std::string, bool);
+  unsigned int tempoDeSimulacao();
 };
 
 

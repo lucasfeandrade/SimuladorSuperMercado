@@ -33,6 +33,9 @@ unsigned int relogioInterno()
   return relogioInterno_;
 }
 
+unsigned int tempoDeSimulacao() {
+    return tempoDeSimulacao_;
+}
 void tempoTotalClientesNaFila(int tempoTotalClientesNaFila)
 {
   tempoTotalClientesNaFila_ += tempoTotalClientesNaFila;

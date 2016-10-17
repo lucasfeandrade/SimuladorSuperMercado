@@ -3,7 +3,7 @@
 
 #include "CaixaSuperMercado.h"
 
-CaixaSuperMercado( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
+CaixaSuperMercado(unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
 {               //MUDADO
     numClientesFila_ = 0;               //nao usamos
     numClientesAtendidos_ = 0;          //nao usamos
