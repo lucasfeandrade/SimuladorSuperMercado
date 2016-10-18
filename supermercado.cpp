@@ -33,14 +33,12 @@ unsigned int supermercado::relogioInterno()
   return relogioInterno_;
 }
 
-<<<<<<< HEAD
-void supermercado::tempoTotalClientesNaFila(int tempoTotalClientesNaFila)
-=======
-unsigned int tempoDeSimulacao() {
+
+
+unsigned int supermercado::tempoDeSimulacao() {
     return tempoDeSimulacao_;
 }
-void tempoTotalClientesNaFila(int tempoTotalClientesNaFila)
->>>>>>> 6567954c2e90f956136cfdf92abbdca9826b6167
+void supermercado::tempoTotalClientesNaFila(int tempoTotalClientesNaFila)
 {
   tempoTotalClientesNaFila_ += tempoTotalClientesNaFila;
 }

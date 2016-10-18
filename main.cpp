@@ -15,13 +15,13 @@
 #include "./Supermercado.hpp"
 
 int main(int argc, const char * argv[]) {
-    
+
     std::srand(std::time(NULL));
-    
+
     structures::Supermercado* mercado = new structures::Supermercado();
-    
+
     mercado->simular();
     mercado->results();
-   
+
     return 0;
 }

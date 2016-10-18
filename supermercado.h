@@ -36,13 +36,9 @@ public:
       supermercado chamará mais um caixa para trabalhar.
       \return void
   */
-<<<<<<< HEAD
     void chamarCaixaExtra(unsigned int, unsigned int,
                           unsigned int, std::string);
-=======
-  void chamarCaixaExtra(unsigned int , unsigned int ,
-                        unsigned int , std::string );
->>>>>>> 6567954c2e90f956136cfdf92abbdca9826b6167
+
   //! Calcula faturamento total
   /*!
       Percorre toda a lista de caixas e soma o faturamento de cada caixa no

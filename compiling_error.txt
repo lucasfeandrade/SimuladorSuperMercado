@@ -1,0 +1,2 @@
+/home/lucasfa/Desktop/UFSC/Estrutura/SuperMercadoGit/SimuladorSuperMercado/main.cpp:15:30: fatal error: ./Supermercado.hpp: No such file or directory
+compilation terminated.
