@@ -69,7 +69,7 @@ public:
       \return void
   */
   void gerarCliente();
-  void clientesAtendidos();
+  unsigned int clientesAtendidos();
   void gerarCaixa(unsigned int, unsigned int, std::string, bool);
   unsigned int tempoDeSimulacao();
 };
