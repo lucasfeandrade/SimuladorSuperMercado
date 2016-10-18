@@ -8,7 +8,7 @@
 
 #include "supermercado.h"
 
-supermercado(std::string nomeSupermercado, unsigned int tempoMedioProximoCliente,
+supermercado::supermercado(std::string nomeSupermercado, unsigned int tempoMedioProximoCliente,
              unsigned int tempoDeSimulacao)
 {
   nomeSupermercado_ = nomeSupermercado;
@@ -23,25 +23,29 @@ supermercado(std::string nomeSupermercado, unsigned int tempoMedioProximoCliente
   tempoTotalClientesNaFila_ = 0;
 }
 
-unsigned int clientesAtendidos()
+unsigned int supermercado::clientesAtendidos()
 {
   return clientesAtendidos_;
 }
 
-unsigned int relogioInterno()
+unsigned int supermercado::relogioInterno()
 {
   return relogioInterno_;
 }
 
+<<<<<<< HEAD
+void supermercado::tempoTotalClientesNaFila(int tempoTotalClientesNaFila)
+=======
 unsigned int tempoDeSimulacao() {
     return tempoDeSimulacao_;
 }
 void tempoTotalClientesNaFila(int tempoTotalClientesNaFila)
+>>>>>>> 6567954c2e90f956136cfdf92abbdca9826b6167
 {
   tempoTotalClientesNaFila_ += tempoTotalClientesNaFila;
 }
 
-void calcularEstatistica()          //MUDADO MUITA COISA
+void supermercado::calcularEstatistica()          //MUDADO MUITA COISA
 {
   auto faturamentoTotal = calcularFaturamento();
   std::cout << "SIMULACAO DO SUPERMERCADO " << nomeSupermercado_ << "." <<
@@ -71,7 +75,7 @@ void calcularEstatistica()          //MUDADO MUITA COISA
   faturamentoPerdido_ << " reais." << std::endl;
 }
 
-void chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
+void supermercado::chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
                       unsigned int eficiencia, std::string id)
 {
     auto counter = 0;
@@ -88,7 +92,7 @@ void chamarCaixaExtra(unsigned int Limite, unsigned int salarioCaixa,
     }
 }
 
-unsigned int calcularFaturamento()
+unsigned int supermercado::calcularFaturamento()
 {
     faturamentoTotal_ = 0u;
     for (auto i = 0; i < ListaCaixas.size() - 1; i++)
@@ -96,12 +100,12 @@ unsigned int calcularFaturamento()
     return faturamentoTotal_;
 }
 
-unsigned int calcularFaturamentoPerdido()
+unsigned int supermercado::calcularFaturamentoPerdido()
 {
   return faturamentoPerdido_;
 }
 
-bool filasLotadas()
+bool supermercado::filasLotadas()
 {
     for (auto i = 0; i < ListaCaixas.size() - 1; i++)
     {
@@ -111,7 +115,7 @@ bool filasLotadas()
     return true;
 } // se passar de X ele retorna true
 
-void tirarCliente()
+void supermercado::tirarCliente()
 {
   for (auto i = 0; i < ListaCaixas.size() - 1 ; i++)
   {
@@ -125,18 +129,19 @@ void tirarCliente()
   relogioInterno_++; //Toda vez que o método é executado o tempo aumenta em 1;
 }
 
-void gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
+void supermercado::gerarCaixa( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
 {
     CaixaSuperMercado* NovoCaixa = new CaixaSuperMercado(salario, eficiencia, id, caixaExtra );
     NovoCaixa.push_back();
     numCaixas_++;
 }
 
-void gerarCliente()
+void supermercado::gerarCliente()
 {
   if (relogioInterno_ == clienteTempoChegadaProximoFila_)
    {
     cliente* cliente = new cliente();
+    cliente.tChegadaSuper(relogioInterno); // ACHO QUE TA ERRADO
     if (!filasLotadas() && cliente.escolherFila())
     {
       auto menosGente = 0u; //indice de caixa com menos pessoas
@@ -183,7 +188,7 @@ void gerarCliente()
   }
 } //checar condicao full
 
-void clienteTempoChegadaProximoFila()
+void supermercado::clienteTempoChegadaProximoFila()
 {
   srand((unsigned)time(NULL));
   clienteTempoChegadaProximoFila_ = rand() % (2*tempoMedioProximoCliente_) + relogioInterno_;

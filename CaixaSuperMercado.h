@@ -22,7 +22,7 @@ private:
     /*!
         Atributo do tipo Cliente, primeiro cliente da fila.
     */
-    cliente primeiroDaFila;
+    cliente primeiroDaFila_;
     //! numClientesFila_
     /*!
         Atributo do tipo unsigned int, indica tamanho da fila.
@@ -69,7 +69,7 @@ private:
     /*!
         Atributo do tipo bool, identifica se o caixa eh extra ou regular.
     */
-    bool caixaExtra;
+    bool caixaExtra_;
 
 
 public:

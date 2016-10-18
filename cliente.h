@@ -13,7 +13,7 @@ private:
   unsigned int tChegadaSuper_;
   //! tSaidaFila_
   /*!
-      Atributo do tipo unsigned int, tempo de saida do caixa.
+    Atributo do tipo unsigned int, tempo de saida do caixa.
   */
   unsigned int tSaidaFila_;
   //! qtdItens_
@@ -68,6 +68,15 @@ public:
   bool escolherFila();
   bool pagamentoDinheiro();
   bool tipoDeCliente();
+  //! tChegadaSuper(int)
+  /*!
+    Setter de tChegadaSuper_.
+  */
+  void tChegadaSuper(int);
+  //! tChegadaSuper(int)
+  /*!
+    Getter de tChegadaSuper_.
+  */
   unsigned int tChegadaSuper();
   unsigned int tSaidaFila();
   void tSaidaFila(unsigned int); //mudar para protected

@@ -3,13 +3,17 @@
 
 #include "CaixaSuperMercado.h"
 
+<<<<<<< HEAD
+CaixaSuperMercado::CaixaSuperMercado( unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
+=======
 CaixaSuperMercado(unsigned int salario, unsigned int eficiencia, std::string id, bool caixaExtra)
+>>>>>>> 6567954c2e90f956136cfdf92abbdca9826b6167
 {               //MUDADO
-    numClientesFila_ = 0;               //nao usamos
-    numClientesAtendidos_ = 0;          //nao usamos
-    tempoMedioDeEspera_ = 0;
-    faturamentoTotal_ = 0;
-    faturamentoMedio_ = 0;
+    numClientesFila_ = 0u;               //nao usamos
+    numClientesAtendidos_ = 0u;          //nao usamos
+    tempoMedioDeEspera_ = 0u;
+    faturamentoTotalCaixa_ = 0u;
+    faturamentoMedio_ = 0u;
     if (eficiencia>= 1 && eficiencia <=3)
         eficiencia_ = eficiencia;
     else
@@ -19,41 +23,42 @@ CaixaSuperMercado(unsigned int salario, unsigned int eficiencia, std::string id,
     if (caixaExtra)
         salario_ = 2*salario;
     else
-        salario_ = salario
+        salario_ = salario;
 }
 
-bool caixaLotado()
+bool CaixaSuperMercado::caixaLotado()
 {
     return filaClientes_.full();
 }
 
-void adicionarFaturamento(unsigned int faturamento)
+void CaixaSuperMercado::adicionarFaturamento(unsigned int faturamento)
 {
-    faturamentoTotal_ +=faturamento;
+    faturamentoTotalCaixa_ += faturamento;
 }
-cliente removerPrimeiroCliente()
+
+cliente CaixaSuperMercado::removerPrimeiroCliente()
 {
     return filaClientes_.dequeue();
 }
 
-void adicionarClienteFila()
+void CaixaSuperMercado::adicionarClienteFila()
 {
     filaClientes_.enqueue();
 }
 
-cliente primeiroDaFila()
+cliente CaixaSuperMercado::primeiroDaFila()
 {
     return filaClientes_.front();
 }
 
-unsigned int faturamentoTotalCaixa()
+unsigned int CaixaSuperMercado::faturamentoTotalCaixa()
 {
     return faturamentoTotalCaixa_;
 }
 
-unsigned int calculaTempoSaida()
+unsigned int CaixaSuperMercado::calculaTempoSaida()
 {
-    cliente cliente;
+    cliente* cliente;
     auto tempoSaida = 0u;
     if (eficiencia_ == 1)
     {
@@ -61,9 +66,9 @@ unsigned int calculaTempoSaida()
         {
             cliente = filaClientes_->contents(i);
             if (cliente->pagamentoDinheiro())
-                tempoSaida += eficiencia*cliente->qtdItens();
+                tempoSaida += eficiencia_*cliente->qtdItens();
             else
-                tempoSaida += eficiencia*cliente->qtdItens() + 10;
+                tempoSaida += eficiencia_*cliente->qtdItens() + 10;
         }
     }
     if (eficiencia_ == 2)
@@ -72,9 +77,9 @@ unsigned int calculaTempoSaida()
         {
             cliente = filaClientes_->contents(i);
             if (cliente->pagamentoDinheiro())
-                tempoSaida += eficiencia*cliente->qtdItens();
+                tempoSaida += eficiencia_*cliente->qtdItens();
             else
-                tempoSaida += eficiencia*cliente->qtdItens() + 25;
+                tempoSaida += eficiencia_*cliente->qtdItens() + 25;
         }
     }
     else
@@ -91,12 +96,12 @@ unsigned int calculaTempoSaida()
     return tempoSaida;
 }
 
-structures::ArrayQueue<cliente> filaClientes()
+structures::ArrayQueue<cliente> CaixaSuperMercado::filaClientes()
 {
   return filaClientes_;
 }
 
-String id_()
+std::string CaixaSuperMercado::id_()
 {
   return id_;
 }

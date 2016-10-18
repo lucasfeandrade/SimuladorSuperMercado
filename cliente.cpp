@@ -5,9 +5,9 @@
 #include <stdlib.h>   // srand, rand
 #include <time.h>     // time
 #include "cliente.h"
-cliente()
+
+cliente::cliente()
 {
-  tChegadaSuper_  =  supermercado.relogioInterno();
   qtdItens_ = gerarQtdItens();
   pagamentoDinheiro_ = pagarEmDinheiro();  // Metodo com 20% de chance dinheiro e 80% cartao
   gastosTotais_ = gerarGastosTotais();
@@ -15,7 +15,7 @@ cliente()
   desistencia_ = false;
 }
 
-unsigned int gerarGastosTotais()
+unsigned int cliente::gerarGastosTotais()
 {
   srand((unsigned)time(NULL));  //seed rand()
   gastosTotais_ = 0;
@@ -28,42 +28,42 @@ unsigned int gerarGastosTotais()
   return gastosTotais_;
 }
 
-unsigned int gerarQtdItens()
+unsigned int cliente::gerarQtdItens()
 {
   srand((unsigned)time(NULL));  //seed rand()
   auto itens = rand() % 99 + 2;  // rand() % 99 gera numero de 0 a 98 (99 numeros)
   return itens;
 }
 
-unsigned int gastosTotais()     //MUDADO
+unsigned int cliente::gastosTotais()     //MUDADO
 {
     return gastosTotais_;
 }
 
-void desistencia(bool desistencia)
+void cliente::desistencia(bool desistencia)
 {
   desistencia_ = desistencia;
 }
 
-bool verificarDesistencia()
+bool cliente::verificarDesistencia()
 {
   return desistencia_; // tem que mudar se nao houver fila com menos de 10 pessoas
 }
 
-unsigned int faturamentoPerdido()
+unsigned int cliente::faturamentoPerdido()
 {
   if (desistencia_)
     return 3*gastosTotais_;
   return 0;
 }
 
-bool escolherFila()
+bool cliente::escolherFila()
 {
   srand((unsigned)time(NULL));
   return rand() % 2;
 }
 
-bool pagarEmDinheiro()
+bool cliente::pagarEmDinheiro()
 {
   srand((unsigned)time(NULL));
   auto chance = rand() % 100;
@@ -72,32 +72,37 @@ bool pagarEmDinheiro()
   return true;
 }
 
-unsigned int qtdItens()
+unsigned int cliente::qtdItens()
 {
   return qtdItens_;
 }
 
-bool pagamentoDinheiro()
+bool cliente::pagamentoDinheiro()
 {
   return pagamentoDinheiro_;
 }
 
-bool tipoDeCliente()
+bool cliente::tipoDeCliente()
 {
   return tipoDeCliente_;
 }
 
-unsigned int tChegadaSuper()
+unsigned int cliente::tChegadaSuper()
 {
   return tChegadaSuper_;
 }
 
-unsigned int tSaidaFila()
+void cliente::tChegadaSuper(int tChegadaSuper)
 {
-  return tSaidaFila_;
+    tChegadaSuper_ = tChegadaSuper;
 }
 
-void tSaidaFila(unsigned int tSaidaFila)
+unsigned int cliente::tSaidaFila()
+{
+  return cliente::tSaidaFila_;
+}
+
+void cliente::tSaidaFila(unsigned int tSaidaFila)
 {
   tSaidaFila_ = tSaidaFila;
 }
