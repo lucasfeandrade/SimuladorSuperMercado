@@ -44,7 +44,7 @@ private:
     std::size_t size_;
     std::size_t max_size_;
 
-     auto DEFAULT_SIZE = 10u;
+    const static auto DEFAULT_SIZE = 10u;
 };
 
 //! Construtor Default

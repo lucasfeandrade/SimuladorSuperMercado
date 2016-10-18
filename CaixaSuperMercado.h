@@ -4,7 +4,7 @@
 #ifndef CAIXA_SUPER_MERCADO_H_
 #define CAIXA_SUPER_MERCADO_H_
 
-#include <string.h>
+#include <string>
 #include "array_queue.h"
 #include "cliente.h"
 //! Classe CaixaSuperMercado
@@ -91,7 +91,7 @@ public:
     /*!
         Enfileira cliente.
     */
-    void adicionarClienteFila();
+    void adicionarClienteFila(cliente);
     //! calculaSalario()
     /*!
         Calcula salario do caixa e o retorna.

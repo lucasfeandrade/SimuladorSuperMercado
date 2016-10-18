@@ -37,9 +37,9 @@ cliente CaixaSuperMercado::removerPrimeiroCliente()
     return filaClientes_.dequeue();
 }
 
-void CaixaSuperMercado::adicionarClienteFila()
+void CaixaSuperMercado::adicionarClienteFila(cliente cliente) //Estava sem entrada, verificar se esta correto. Mudado em .h tbm.
 {
-    filaClientes_.enqueue();
+    filaClientes_.enqueue(cliente);
 }
 
 cliente CaixaSuperMercado::primeiroDaFila()
@@ -58,7 +58,7 @@ unsigned int CaixaSuperMercado::calculaTempoSaida()
     auto tempoSaida = 0u;
     if (eficiencia_ == 1)
     {
-        for (auto i = 0; i < filaClientes_->size(); i++)
+        for (auto i = 0; i < filaClientes_->size(); i++) // Precisa mudar, ou filaClientes_ vira ponteiro, ou -> vira .
         {
             cliente = filaClientes_->contents(i);
             if (cliente->pagamentoDinheiro())
@@ -97,7 +97,7 @@ structures::ArrayQueue<cliente> CaixaSuperMercado::filaClientes()
   return filaClientes_;
 }
 
-std::string CaixaSuperMercado::id_()
+std::string CaixaSuperMercado::id()
 {
   return id_;
 }
